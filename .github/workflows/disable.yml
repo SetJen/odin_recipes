@@ -1,0 +1,11 @@
+name: 🔒 Disable all workflows
+on:
+  push:
+    branches:
+      - wont-trigger-1
+
+jobs:
+  noop:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "This workflow blocks queued runs"
